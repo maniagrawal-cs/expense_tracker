@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense_tracker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="head">Expense Tracker</h1>
+    <form id="form">
+        <div>
+        <label class="label">Expense Name:</label>
+        <input type="text" placeholder="Add Expense" id="expenseName"><br> <!--we can use name too but it give list of elements in js when using getElementByName so we have to use indexing. Id needs to be unique but names need not to be unique.-->
+        <label class="label">Amount:</label>
+        <input type="number" placeholder="Add Amount" id="amount"><br>
+        <label class="label">Category:</label>
+        <select name="Category" id="category">
+            <option value="Food">Food</option>
+            <option value="Rent">Rent</option>
+            <option value="Convenience">Convenience</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <label class="label">Date:</label>
+        <input type="Date" id="date"><br>
+        <button type="button" onclick="addExpense();">Add Expense</button>
+    </div>
+    <div>
+        <h3>Total Expense:</h3>
+        <p id="total">0</p>
+    </div>
+    </form>
+    <table id="table">
+        <tr>
+            <th>Expense Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <!-- <th>Action</th> -->
+        </tr>
+    </table>
+    <script src="expense_tracker.js"></script>
+</body>
+</html>
